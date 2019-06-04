@@ -64,3 +64,7 @@ TMP_DL
 GeneratedTestData
 temp.unoproj
 *.rfile
+
+# Additional files
+_site
+outline-navigation.html
