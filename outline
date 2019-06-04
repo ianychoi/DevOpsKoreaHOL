@@ -1,0 +1,10 @@
+// The rootnode will be hidden from navigation on the webpage, but needs to
+// be here right now for technical reasons
+
+Index : articles/index.md
+
+	Credit : articles/credit.md
+
+//	Alive UX Kit : articles/alive/alive.md
+//		Components : api-docs/api/alive.json
+//		Themes : articles/alive/themes.md

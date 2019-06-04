@@ -1,0 +1,23 @@
+{
+  "root": {
+    "id": {
+      "id": "alive/page",
+      "parentId": "alive",
+      "type": "Class",
+      "modifiers": [
+        "public",
+        "partial"
+      ]
+    },
+    "uri": {
+      "idUri": "alive/page",
+      "href": "alive/page"
+    },
+    "titles": {
+      "indexTitle": "Page",
+      "fullyQualifiedIndexTitle": "Alive.Page"
+    }
+  },
+  "descendants": [
+  ]
+}

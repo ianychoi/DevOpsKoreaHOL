@@ -1,0 +1,429 @@
+/*
+ * Base styling
+ */
+body {
+    color: #332f2f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #332f2f;
+    margin-bottom: 1.25rem;
+}
+
+p {
+    margin-bottom: 2rem;
+}
+
+pre[class*="language-"] {
+    margin-bottom: 2rem;
+}
+
+code:not([class]) {
+    background: #272822;
+    color: #f8f8f2;
+    padding: 0.2rem 0.4rem;
+}
+
+a {
+    color: #9846EF;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #813bcc;
+}
+
+.sidebar {
+    padding-top: 1rem;
+}
+.main-content {
+    padding-top: 2rem;
+}
+
+/*
+ * Navigation bar styling
+ */
+.navbar .form-control {
+    padding: 0.75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
+}
+
+.navbar-brand {
+    font-size: 1rem;
+    text-decoration: none;
+    padding-top: 0.5rem;
+}
+
+/*
+ * Algolia DocSearch styling
+ */
+
+form#search > span {
+    width: 100%;
+}
+
+
+/*
+ * Linkable headers
+ */
+.anchor-header {
+    margin-left: -1rem;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.anchor-header-link {
+    font-size: 1rem;
+    color: #332f2f;
+    text-decoration: none;
+    position: absolute;
+    margin-left: -20px;
+    cursor: pointer;
+    display: none;
+}
+
+.anchor-header:hover .anchor-header-link {
+    display: block;
+}
+
+h1.anchor-header .anchor-header-link {
+    bottom: 0.8rem;
+}
+h2.anchor-header .anchor-header-link {
+    bottom: 0.7rem;
+}
+h3.anchor-header .anchor-header-link {
+    bottom: 0.5rem;
+}
+h4.anchor-header .anchor-header-link {
+    bottom: 0.5rem;
+}
+h5.anchor-header .anchor-header-link {
+    bottom: 0.25rem;
+}
+h6.anchor-header .anchor-header-link {
+    bottom: 0.25rem;
+}
+
+/*
+ * Outline navigation styling
+ */
+.outline-nav a {
+    color: #332f2f;
+    text-decoration: none;
+}
+
+.outline-nav a:hover {
+    color: #332f2f;
+    text-decoration: none;
+}
+
+.outline-nav ul li ul {
+    margin-left: 1rem;
+}
+
+.outline-nav-level-0 > li > a {
+    display: none;
+}
+
+.outline-nav-level-1 > li {
+    margin-top: 1.5rem;
+}
+
+.outline-nav-level-1 > li > a {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    color: #9846EF;
+    text-decoration: underline;
+}
+
+.outline-nav-level-1 > li > a:hover {
+    color: #7f3ac9;
+    text-decoration: underline;
+}
+
+.outline-nav-level-2 {
+    margin-left: 0 !important;
+}
+
+.outline-nav-level-2 > li > a:hover {
+    color: #9846EF;
+}
+
+/*
+ * API reference page styling.
+ */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.page-header .sub-title {
+    font-size: 1rem;
+    color: #332f2f;
+}
+
+.section-jump {
+    background: #f9f9f9;
+    margin-bottom: 2rem;
+}
+
+.advanced-toggle {
+    display: none;
+}
+
+.alert-api-advanced-only {
+    display: none;
+}
+
+.table-of-contents-section {
+    margin-bottom: 25px;
+}
+
+.table-of-contents-item {
+    padding: 8px 0 8px 30px;
+    position: relative;
+    border-bottom: 1px solid #f2f2f2;
+}
+.table-of-contents-item:last-child {
+    border-bottom: none;
+}
+
+.table-of-contents-item-type {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    color: #999;
+}
+.table-of-contents-item-type-property,
+.table-of-contents-item-type-uxproperty,
+.table-of-contents-item-type-jsproperty,
+.table-of-contents-item-type-attacheduxproperty {
+    color: #ffe066 !important;
+}
+.table-of-contents-item-type-event,
+.table-of-contents-item-type-uxevent,
+.table-of-contents-item-type-jsevent,
+.table-of-contents-item-type-attacheduxevent {
+    color: #72d870 !important;
+}
+.table-of-contents-item-type-method,
+.table-of-contents-item-type-jsmethod,
+.table-of-contents-item-type-constructor {
+    color: #50808e !important;
+    top: 12px !important;
+}
+.table-of-contents-item-type-jsmethod {
+    color: #e59eff !important;
+}
+.table-of-contents-item-type-constructor {
+    colortop: 10px !important;
+}
+.table-of-contents-item-type-literal {
+    color: #7dcd85 !important;
+}
+.table-of-contents-item-type-class,
+.table-of-contents-item-type-uxclass,
+.table-of-contents-item-type-jsmodule {
+    color: #6670b7 !important;
+}
+.table-of-contents-item-type-namespace {
+    color: #1ca091 !important;
+}
+.table-of-contents-item-type-enum {
+    color: #a5d341 !important;
+}
+.table-of-contents-item-type-struct {
+    color: #ff7e77 !important;
+}
+.table-of-contents-item-type-delegate {
+    color: #d8d8d8 !important;
+}
+.table-of-contents-item-type-interface {
+    color: #8caaaf !important;
+}
+.table-of-contents-item-type-operator {
+    color: #d0b2f7 !important;
+}
+.table-of-contents-item-type-field {
+    color: #a9d59d !important;
+}
+.table-of-contents-item-type-cast {
+    color: #a4b0f5 !important;
+}
+.table-of-contents-item-type-swizzlertype {
+    color: #5d88c1 !important;
+}
+
+.table-of-contents-item h5 {
+    font-size: 1rem;
+    margin: 0;
+    padding-top: 2px;
+}
+.table-of-contents-item h5 a {
+    color: #666;
+    text-decoration: none;
+}
+.table-of-contents-item-has-more {
+    margin-left: 5px;
+    color: #999;
+}
+
+.table-of-contents-item-brief p {
+    margin-top: 0.25rem;
+}
+.table-of-contents-item-brief p:last-child {
+    margin-bottom: 0;
+}
+.table-of-contents-item-brief h1,
+.table-of-contents-item-brief h2,
+.table-of-contents-item-brief h3,
+.table-of-contents-item-brief h4,
+.table-of-contents-item-brief h5,
+.table-of-contents-item-brief h6 {
+    color: #332f2f;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.table-of-contents-item-language {
+    font-size: 0.8rem;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    padding: 2px 4px;
+    font-family: monospace;
+    background: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    top: 6px;
+}
+.table-of-contents-item-language-js {
+    border-color: #c3edce;
+    color: #3ac292;
+}
+.table-of-contents-item-language-ux {
+    border-color: #dbbed3;
+    color: #8a2763;
+}
+.table-of-contents-item-language-uno {
+    border-color: #cad8dd;
+    color: #50808e;
+}
+
+.parameters,
+.returns {
+    margin-bottom: 2rem;
+}
+.parameters p,
+.returns p {
+    margin-bottom: 0;
+}
+
+
+/*
+ * Block quote styling for callouts
+ */
+blockquote {
+    background-color: #d7ffe4;
+    padding: 1em;
+    border-left-style: solid;
+    border-left-width: 15px;
+    border-right-style: solid;
+    border-right-width: 2px;
+    border-left-color: #bffbd3;
+    border-right-color: #bffbd3;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+blockquote.callout-warn {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+blockquote.callout-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+blockquote.callout-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+blockquote.callout-info {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+}
+
+blockquote.callout-light {
+    color: #818182;
+    background-color: #fefefe;
+    border-color: #fdfdfe;
+}
+
+blockquote.callout-dark {
+    color: #1b1e21;
+    background-color: #d6d8d9;
+    border-color: #c6c8ca;
+}
+
+
+
+#defaultHeader {
+    background: #aaaaaa;
+}
+
+.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.justify-content-center {
+    justify-content: center !important;
+}
+
+.navbar-brand a {
+  text-decoration: none !important;
+  font-style: normal;
+}
+header .nav-item a:link, header .nav-item a:active, header .nav-item a:visited {
+  color: white;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  opacity: .65;
+  text-decoration: none;
+}
+header .nav-item a:hover {
+  opacity: 1 !important;
+  text-decoration: underline;
+  transition: .28s;
+}
+header .navbar a:link, header .navbar a:active, header .navbar a:visited, header .navbar a:hover {
+  color: #111 !important;
+  font-size: 15px;
+}
+.navbar-dark .navbar-nav .nav-link.active {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+
+
+
+
+
+

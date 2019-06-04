@@ -1,0 +1,25 @@
+{
+  "entity": {
+    "id": {
+      "id": "alive",
+      "type": "Namespace",
+      "modifiers": []
+    },
+    "uri": {
+      "idUri": "alive",
+      "href": "alive"
+    },
+    "titles": {
+      "pageTitle": "Alive Namespace",
+      "navigationTitle": "Alive Namespace",
+      "fullTitle": "Alive",
+      "indexTitle": "Alive",
+      "fullyQualifiedIndexTitle": "Alive"
+    },
+    "syntax": {
+      "uno": "namespace Alive {}"
+    }
+  },
+  "tableOfContents": {
+ }
+}
