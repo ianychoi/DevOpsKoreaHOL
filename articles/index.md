@@ -6,7 +6,7 @@
 
 *Azure* VM, Function Apps, Containers 등 사전 지식을 따로 필요로 하지 않습니다.
 Git에 사용 방법에 대해서 알고 있다고 가정하고 실습을 진행합니다.
-Hello World
+Hello, Junhyun!
 
 ## 설치
 
