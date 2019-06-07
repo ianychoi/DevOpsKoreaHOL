@@ -14,7 +14,18 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: 
-    sudo su
+	
     dotnet run -p generator/src/generator.csproj -- . "http://localhost:8000/" _site
     ./copy-assets.bash _site
   displayName: 'Run a multi-line script'
+  
+- script: 
+#!/bin/bash
+if [ $# -ne 1 ]; then
+	echo "usage: $0 <destination>" >&2
+	exit 1
+fi
+
+cp -r media $1/ &&
+cp -r static/* $1/
+  displayName: 'Post Script'
