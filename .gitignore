@@ -68,3 +68,6 @@ temp.unoproj
 # Additional files
 _site
 outline-navigation.html
+
+# gh-pages folder will be used in Azure DevOps on this project
+gh-pages

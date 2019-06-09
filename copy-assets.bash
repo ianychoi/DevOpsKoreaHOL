@@ -5,5 +5,5 @@ if [ $# -ne 1 ]; then
 	exit 1
 fi
 
-cp -r media $1/ &&
+cp -r media/* $1/ &&
 cp -r static/* $1/
