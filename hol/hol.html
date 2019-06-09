@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>HOL&#xC758; &#xBAA9;&#xD45C; - Fuse Documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://ianychoi.github.io/DevOpsKoreaHOL/prism.css">
+    <link rel="stylesheet" href="http://ianychoi.github.io/DevOpsKoreaHOL/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
+  </head>
+
+  <body>
+    
+    <div id="defaultHeader">
+      <header class="site-header sticky-top" role="banner">
+        <nav class="navbar navbar-dark navbar-expand-md bg-faded justify-content-center">
+          <a class="navbar-brand" href="/"><img width="138px" src="http://ianychoi.github.io/DevOpsKoreaHOL/transparent-logo.png"></a>   
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse w-100" id="collapsingNavbar3">
+            <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+              
+              <li class="nav-item"><a class="effect nav-link active" href="http://meetup.devopskorea.com/201906/">[Korea DevOps Meetup '19]</a></li>
+              
+              <li class="nav-item"><a class="effect nav-link" href="https://www.facebook.com/groups/TeAnE/">[DevOps Korea (Facebook)]</a></li>
+              
+              <li class="nav-item"><a class="effect nav-link" href="https://www.facebook.com/groups/573332783173509/">[컨테이너 연구소 - DevOps Korea branch]</a></li>
+              
+              <li class="nav-item"><a class="effect nav-link" href="https://docs.microsoft.com/ko-kr/azure/devops-project/">[Azure DevOps 프로젝트 설명서]</a></li>
+              
+            </ul>
+          </div>
+          
+        </nav>
+      </header>
+    </div>
+
+    <!-- <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap">
+      <a class="navbar-brand" href="http://ianychoi.github.io/DevOpsKoreaHOL/">Documentation</a>
+    </nav> -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 col-md-3 col-xl-2 order-2 order-md-1 bg-light sidebar">
+          <form id="search">
+            <input type="search" class="form-control" id="search-input" placeholder="Search..." aria-label="Search for..." autocomplete="off">
+          </form>
+
+          <ul class="list-unstyled outline-nav outline-nav-level-0">
+	<li>
+		<a href="http://ianychoi.github.io/DevOpsKoreaHOL/index.html">Index</a>
+	<ul class="list-unstyled outline-nav outline-nav-level-1">
+		<li>
+			<a href="http://ianychoi.github.io/DevOpsKoreaHOL/hol/hol.html">HOL</a>
+		</li>
+		<li>
+			<a href="http://ianychoi.github.io/DevOpsKoreaHOL/credit.html">Credit</a>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+        </div>
+        <div role="main" class="col-12 col-md-9 col-xl-10 order-1 order-md-2 px-4 main-content">
+          <h1 id="hol">HOL의 목표</h1>
+<ul>
+<li>Azure DevOps - GitHub Connection 을 활용</li>
+<li>Git Commit을 Trigger로 Dashboard Task 처리</li>
+<li>GitHub Integration with Azure Pipelines 통합 진행</li>
+<li>GitHub integration with Azure Boards 진행, Commit or Push 를 통해 TASK 진행 여부 확인</li>
+<li>Azure Pipelines를 통해 github.io  에서 확인 가능</li>
+</ul>
+<h3>준비사항</h3>
+<ul>
+<li>Git-Bash 다운로드 (http://git-scm.com)</li>
+<li>Github ID (http://github.com)</li>
+<li>Azure DevOps ID (http://dev.azure.com)</li>
+</ul>
+<h3>예제 설명</h3>
+<ul>
+<li>'MarkDown 파일을 작성, Html로 퍼블리싱하는 예제'를 Azure DevOps Pipeline을 통해 자동화</li>
+</ul>
+<h3 id="senario">Senario 요약</h3>
+<ul>
+<li>Git-Bash RSA 키 발급</li>
+<li>Github 에서 특정 프로젝트 Fork</li>
+<li>Azure DevOps ID + 프로젝트 생성</li>
+<li>Github 과 Azure DevOps 연동</li>
+<li>Github 의 Commit시, Azure DevOps Pipeline을 통해 프로젝트를 자동으로 빌드</li>
+<li>빌드 이후 Github으로 자동으로 Push</li>
+<li>Github 의 Commit을 통해, Azure DevOps Board에서 Task Auto Complete 처리</li>
+</ul>
+<h1 id="hol">HOL</h1>
+<h3 id="git-bash">Git-Bash 에서</h3>
+<ol>
+<li>Git-bash 실행</li>
+<li>ssh-keygen -t rsa -f devopskrkeyfile 명령어 실행</li>
+<li>passphrase(비밀번호) 입력 - 엔터로 넘어가도 무방</li>
+<li>2번 명령어를 실행한 폴더에서 devopskrkeyfile, devopskrkeyfile.pub  2개의 파일 생성 확인</li>
+<li>cat devopskrkeyfile.pub 명령어를 통해 출력값 복사</li>
+</ol>
+<h3 id="github-http-github-com">Github (http://github.com)에서</h3>
+<ol>
+<li>http://github.com 에서 SignUp을 통해 회원가입</li>
+<li>http://github.com 에서 SignIn을 통해 로그인</li>
+<li>https://github.com/ianychoi/DevOpsKoreaHOL 페이지로 이동</li>
+<li>우측 상단 &quot;FORK&quot; 클릭</li>
+<li>자신의 계정으로 FORK</li>
+<li>https://github.com/자신의_ID/DevOpsKoreaHOL 가 생성 됨을 확인</li>
+<li>https://github.com/자신의_ID/DevOpsKoreaHOL 에서 &quot;Settings&quot; 메뉴로 이동</li>
+<li>왼쪽 메뉴 하단 Deploy keys 선택</li>
+<li>&quot;Add Deploy Key&quot; 버튼 선택</li>
+<li>Title(임의 작성), Key(RSA키 내용 복사), Allow write access 체크박스 체크후 &quot;Add Key&quot; 버튼 선택</li>
+<li>SSH 키가 등록 되었음을 확인
+<img src="hol1.png" alt="hol1.png"></li>
+</ol>
+<h3 id="azure-devops">Azure DevOps 에서</h3>
+<h4 id="pipelines-1">Pipelines 구성 1</h4>
+<ol>
+<li>http://dev.azure.com 에서 아이디를 생성후 StartFree 링크로 이동</li>
+<li>약관 동의
+3.Create a Project get Started 항목에서 Project Name, Public 설정후 Project 생성</li>
+<li>왼쪽 하단 Project Setting 메뉴 선택</li>
+<li>Board &gt;&gt; Git Connections &gt;&gt; Connect your GitHub account 메뉴 선택</li>
+<li>Github 로그인을 통해 Azure Board 동기화</li>
+<li>Github 에서 Fork 해뒀던  '자신의_ID/DevOpsKoreaHOL' 프로젝트 지정후 Save</li>
+<li>Github Connection 페이지에서ㅕ Github과 연동이 되었는지 확인</li>
+</ol>
+<h3 id="pipelines-2">Pipelines 구성 2</h3>
+<ol>
+<li>Azure DevOps 왼쪽 메뉴에서 파란색 아이콘인 Pipelines 선택</li>
+<li>하위 메뉴의 Build 선택후 오른쪽 메뉴에서 New Pipeline 버튼 선택</li>
+<li>오른쪽 새로 나타난 블레이드 메뉴에서 NEW+ 버튼 &gt;&gt; New Build PipeLine 선택</li>
+<li>Connect 항목에서, 항목단 아래의 'Use The Classic Editor' 선택</li>
+<li>Select Source 항목에서 Github 을 선택</li>
+<li>Authorize using OAUTH 버튼을 선택</li>
+<li>Repository를 기존에 Fork 한 프로젝트를 선택</li>
+<li>Default Branch Build 항목은 Master를 선택</li>
+<li>Continue 버튼 선택</li>
+<li>Select a template 에서 Empty Job 선택</li>
+</ol>
+<h3 id="pipelines-3">Pipelines 구성 3</h3>
+<ol>
+<li>Task &gt;&gt; Pipeline &gt;&gt; Get Sources &gt;&gt; Agent Job 1 이 구성되어 있는지 확인</li>
+<li>Agent Job 1 블록 우측의 +버튼을 선택</li>
+<li>Add Task에서 Search를 활용하여 Task를 추가함(추가항목은 이후 참조)</li>
+<li>&quot;.Net Core&quot;</li>
+<li>&quot;Bash&quot;</li>
+<li>&quot;Install SSH Key&quot;</li>
+<li>&quot;Bash&quot;</li>
+<li>&quot;Copy Files&quot;</li>
+<li>&quot;Bash&quot;</li>
+<li>위 항목을 차례대로 TASK 추가.</li>
+<li>Agent Job 1 이하, .NetCore, Bash, Install SSH Key , Bash, Copy Files, Bash 순서로 구성되었는지 확인.
+<img src="hol2.png" alt="hol.png"></li>
+</ol>
+<h3 id="pipelines-4">Pipelines 구성 4</h3>
+<ol>
+<li>1 DotNet Build 항목에서</li>
+<li>Command 를  Build &gt;&gt; Test로 변경</li>
+<li>Path to project(s) &gt;&gt; generator 입력
+<img src="hol3.png" alt="hol.png"></li>
+</ol>
+<h3></h3>
+<h3 id="pipelines">Pipelines 구성 계속</h3>
+<ol>
+<li>2 Bash 항목에서</li>
+<li>Type를 Inline으로 선택</li>
+<li>다음을 입력</li>
+</ol>
+<pre><code># Write your commands here
+dotnet run -p generator/src/generator.csproj -- . &quot;http://${GITHUB_USERNAME}.github.io/DevOpsKoreaHOL/&quot; _site
+./copy-assets.bash _site
+# Use the environment variables input below to pass secret variables to this script
+</code></pre>
+<p><img src="hol4.png" alt="hol.png"></p>
+<h3></h3>
+<h3 id="pipelines">Pipelines 구성 계속</h3>
+<ol>
+<li>3 Install SSH Key 항목에서</li>
+<li>Known Hosts Entry 항목에 known_hosts 파일의 내용을 복사</li>
+</ol>
+<pre><code>13.229.188.59 ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDSwBK6TbQa+PXYPCPy6rbTrTtw7PHkccKrpp0yVhp5HdEIcKr6pLlVDBfOLX9QUsyCOV0wzfjIJNlGEYsdlLJizHhbn2mUjvSAHQqZETYP81eFzLQNnPHt4EVVUh7VfDESU84KezmD5QlWpXLmvU31/yMf+Se8xhHTvKSCZIFImWwoG6mbUoWf9nzpIoaSjB+weqqUUmpaaasXVal72J+UX2B+2RPW3RcT0eOzQgqlJL3RKrTJvdsjE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
+</code></pre>
+<ol start="3">
+<li>SSH Public Key 항목에 devopskrkeyfile.pub 파일의 내용을 복사</li>
+<li>SSH Passphrase 항목에 키 생성시 입력한 비밀번호를 입력(없을시 빈칸)</li>
+<li>SSH Key 항목에 devopskrkeyfile 파일을 선택하여 업로드(예: ssh-keygen을 실행했던 폴더 / 디폴트 파일 (-f 옵션이 없을 때: C:\Users\사용자.ssh\id_rsa)<img src="hol5.png" alt="hol.png"></li>
+</ol>
+<h3></h3>
+<h3 id="pipelines">Pipelines 구성 계속</h3>
+<ol>
+<li>4 Bash 항목에서</li>
+<li>Type를 Inline으로 선택</li>
+<li>다음을 입력(자신의 .Git으로 변경)</li>
+</ol>
+<pre><code># Write your commands here
+git config --global user.name &quot;DevOps CI&quot;
+git config --global user.email &quot;devops@devops.kr&quot;
+echo -e &quot;Host github.com\n\tStrictHostKeyChecking no\n&quot; &gt;&gt; ~/.ssh/config
+chmod 600 ~/.ssh/config
+git clone -b gh-pages git@github.com:${GITHUB_USERNAME}/DevOpsKoreaHOL.git gh-pages
+echo &quot;clone success&quot;
+# Use the environment variables input below to pass secret variables to this script
+</code></pre>
+<p><img src="hol6.png" alt="hol.png"></p>
+<h3></h3>
+<h3 id="pipelines">Pipelines 구성 계속</h3>
+<ol>
+<li>5 Copy Files 항목에서</li>
+<li>Source Folder에서 다음을 입력 <code>_site</code></li>
+<li>Contents에서 다음을 입력 <code>**</code></li>
+<li>Target Folder에서 다음일 입력 <code>gh-pages</code></li>
+<li>Advanced 항목에서 Overwrite 항목 체크
+<img src="hol7.png" alt="hol.png"></li>
+</ol>
+<h3></h3>
+<h3 id="pipelines">Pipelines 구성 계속</h3>
+<ol>
+<li>6 Bash 항목에서</li>
+<li>Type를 Inline으로 선택</li>
+<li>Script 항목에서 다음일 입력</li>
+</ol>
+<pre><code class="language-#">cd gh-pages
+git add .
+git commit -a -m &quot;Update HTMLs&quot;
+git push origin gh-pages:gh-pages
+echo &quot;push success&quot;
+# Use the environment variables input below to pass secret variables to this script
+</code></pre>
+<h2><img src="hol8.png" alt="hol.png"></h2>
+<h4 id="variables">Variables 세팅</h4>
+<p>GITHUB_USERNAME 변수 생성 Values는 자신의 Git ID
+<img src="hol9.png" alt="hol.png"></p>
+<hr>
+<h4 id="commit-trigger">Commit Trigger 세팅</h4>
+<p><img src="hol10.png" alt="hol.png"></p>
+<hr>
+<h2 id="board-commit-auto-complete">Board 에서 Commit에 따른 Auto Complete</h2>
+<ol>
+<li>
+<p>Board 항목에서 새로운 워크 아이템을 추가 합니다.
+<img src="hol11.png" alt="hol.png"></p>
+</li>
+<li>
+<p>임의의 Issue 를 생성 합니다.
+<img src="hol12.png" alt="hol.png"></p>
+</li>
+<li>
+<p>새로운 TASK 를 생성후 TASK #Number를 확인 합니다. 예제에서는 2번 입니다.
+<img src="hol13.png" alt="hol.png"></p>
+</li>
+<li>
+<p>Gibhub에서 임의의 파일을 수정후 'Fixes AB#2' 라는 Commit 을 합니다.
+<img src="hol14.png" alt="hol.png"></p>
+</li>
+<li>
+<p>Github 에서 커밋 이후, Azure DevOps에서 자동으로 Build 가 발생하는것을 확인 할 수 있습니다.
+<img src="hol15.png" alt="hol.png"></p>
+</li>
+</ol>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ianychoi.github.io/DevOpsKoreaHOL/prism.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script type="text/javascript" src="http://ianychoi.github.io/DevOpsKoreaHOL/site.js"></script>
+  </body>
+</html>
