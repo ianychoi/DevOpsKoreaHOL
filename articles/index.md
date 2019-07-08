@@ -3,7 +3,7 @@
 # Azure DevOps HOL
 
 
-[DevOps Korea Meetup](http://meetup.devopskorea.com/201906/) 행사에서 진행하는 Hands on Lab입니다.
+[DevOps Korea Meetup](http://meetup.devopskorea.com/201906/) 행사에서 진행했던 Hands on Lab입니다.
 
 ## 사전 준비 사항
 
@@ -18,5 +18,3 @@ Hello, Junhyun!
 ### Let's go!
 
 핸즈온랩을 시작해 봅시다. 같이 계신 분과 함께 즐거운 시간을 TASK 5
-
-Helloworld
