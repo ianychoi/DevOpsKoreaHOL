@@ -1,9 +1,6 @@
-```
-Azure AZ203 실습
-```
+# 2019-07-18 스캐터랩 DEMO
 
 # Azure DevOps HOL
-
 
 [DevOps Korea Meetup](http://meetup.devopskorea.com/201906/) 행사에서 진행했던 Hands on Lab입니다.
 
@@ -11,7 +8,6 @@ Azure AZ203 실습
 
 *Azure* VM, Function Apps, Containers 등 사전 지식을 따로 필요로 하지 않습니다.
 Git에 사용 방법에 대해서 알고 있다고 가정하고 실습을 진행합니다.
-Hello, Junhyun!
 
 ## 설치
 
@@ -19,4 +15,4 @@ Hello, Junhyun!
 
 ### Let's go!
 
-핸즈온랩을 시작해 봅시다. 같이 계신 분과 함께 즐거운 시간을 TASK 5
+핸즈온랩을 시작해 봅시다. 같이 계신 분과 함께 즐거운 시간을 !
