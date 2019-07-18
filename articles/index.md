@@ -1,5 +1,9 @@
 # 2019-07-18 스캐터랩 DEMO
 
+```
+ 이런것 저런것
+```
+
 # Azure DevOps HOL
 
 [DevOps Korea Meetup](http://meetup.devopskorea.com/201906/) 행사에서 진행했던 Hands on Lab입니다.
