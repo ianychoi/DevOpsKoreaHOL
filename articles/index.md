@@ -1,5 +1,5 @@
-# 11월 23일 DevOps Agile + CI + CD + 실습까지 수고 많으셨습니다.
-## 뿌잉.
+# 11월 29일 DevOps Agile + CI + CD + 실습까지 수고 많으셨습니다.
+## 오잉.
 
 # Azure DevOps HOL
 
