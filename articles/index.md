@@ -1,4 +1,5 @@
-# 12월 20일 이거 마치고 AKS 까지 하고 마칠게요...
+# Microsoft Ignite the Tour Seoul ! BRK30131
+## 세션전에 올려둔 내용입니다.
 
 # Azure DevOps HOL
 
@@ -14,5 +15,3 @@ Git에 사용 방법에 대해서 알고 있다고 가정하고 실습을 진행
 [Git](https://git-scm.com/downloads)를 통해 다운로드 및 설치가 가능합니다.
 
 ### Let's go!
-
-핸즈온랩을 시작해 봅시다. 같이 계신 분과 함께 즐거운 시간을 !
