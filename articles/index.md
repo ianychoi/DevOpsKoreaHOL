@@ -1,5 +1,5 @@
 # Microsoft Ignite the Tour Seoul ! BRK30131
-## 세션전에 올려둔 내용입니다.
+## 세션 중에 업데이트한 내용입니다.
 ## 안녕하세요 :)
 
 # Azure DevOps HOL
