@@ -1,6 +1,4 @@
-# Microsoft Ignite the Tour Seoul ! BRK30131
-## 세션 중에 업데이트한 내용입니다.
-## 안녕하세요 :)
+# 클라우드메이트 실습중
 
 # Azure DevOps HOL
 
