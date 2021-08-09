@@ -1,0 +1,25 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- script: 	
+    dotnet run -p generator/src/generator.csproj -- . "http://localhost:8000/" _site
+    ./copy-assets.bash _site
+  displayName: 'Run a multi-line script'
+  
+- script: 
+#!/bin/bash
+cp -r media $1/ &&
+cp -r static/* $1/
+  displayName: 'Post Script'
