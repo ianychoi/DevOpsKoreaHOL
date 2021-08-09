@@ -1,9 +1,5 @@
 # Azure DevOps와 Github간 CI/CD 연동 테스트 입니다.
-## 티켓 자동 완료에 대해서는 다음 문서를 참조 해주세요
-## https://docs.microsoft.com/en-us/azure/devops/notifications/add-links-to-work-items?toc=%2Fazure%2Fdevops%2Fboards%2Ftoc.json&bc=%2Fazure%2Fdevops%2Fboards%2Fbreadcrumb%2Ftoc.json&view=azure-devops#keyword-logic
-## 
-### 
-###
+## 티켓 자동 완료에 대해서는 다음 문서를 참조 해주세요 [Link](https://docs.microsoft.com/en-us/azure/devops/notifications/add-links-to-work-items?toc=%2Fazure%2Fdevops%2Fboards%2Ftoc.json&bc=%2Fazure%2Fdevops%2Fboards%2Fbreadcrumb%2Ftoc.json&view=azure-devops#keyword-logic)
 
 # Azure DevOps HOL
 
