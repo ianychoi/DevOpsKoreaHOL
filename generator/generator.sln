@@ -1,7 +1,6 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "generator", "src\generator.csproj", "{C7938487-87B4-4F3A-A674-E29E1A211706}"
 EndProject
@@ -13,9 +12,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C7938487-87B4-4F3A-A674-E29E1A211706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -30,5 +26,11 @@ Global
 		{C7938487-87B4-4F3A-A674-E29E1A211706}.Release|x64.Build.0 = Release|x64
 		{C7938487-87B4-4F3A-A674-E29E1A211706}.Release|x86.ActiveCfg = Release|x86
 		{C7938487-87B4-4F3A-A674-E29E1A211706}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E5E5DA4-141E-4F7B-BC64-924E2F7ABBB5}
 	EndGlobalSection
 EndGlobal
